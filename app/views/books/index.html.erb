@@ -1,0 +1,25 @@
+<h1> books index </h1>
+<table>
+	<thead>
+		<tr>
+			<th> Name</th>
+			<th> description</th>
+			<th>user id</th>
+			<td><%colspan= '3'%></td>	
+		</tr>
+	</thead>
+	<tbody>
+		<% @books.each do |book| %>
+		<tr>
+			<td><%=book.name%></td>
+			<td><%=book.description%></td>
+		     <td><%=book.user_id%></td>
+			<td><%=link_to 'show', book_path(book)%></td>
+			<td><%=link_to 'edit', edit_book_path(book)%></td>
+			<td><%=link_to 'destroy', book,method: :delete,data:{confirm: 'Are you sure'} %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to "New book" ,new_book_path%>

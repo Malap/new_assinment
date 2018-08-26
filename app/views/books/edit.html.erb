@@ -1,0 +1,19 @@
+<h3> book details </h3>
+<%= form_for(@book) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+   <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to  "back", users_path %>
+<%= link_to  "books list", books_path %>
+<%= link_to  "back", books_path %>

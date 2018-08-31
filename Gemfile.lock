@@ -51,6 +51,8 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    devise (1.1.rc0)
+      warden (~> 0.10.3)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.25)
@@ -146,6 +148,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.18)
       execjs (>= 0.3.0, < 3)
+    warden (0.10.7)
+      rack (>= 1.0.0)
     web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -161,6 +165,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
+  devise (= 1.1.rc0)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

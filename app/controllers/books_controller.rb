@@ -38,6 +38,7 @@ class BooksController < ActionController::Base
     @book.destroy
     redirect_to users_path
   end
+  
 
    private
 

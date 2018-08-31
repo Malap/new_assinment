@@ -18,6 +18,7 @@ resources :laptops do
     end
           collection do
             get 'first_10_records'
+            get 'ajax_demo'
           end
       end
 

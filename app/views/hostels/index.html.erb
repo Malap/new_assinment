@@ -27,5 +27,27 @@
 </table>
 
 <br>
+  <%= button_tag "create there records hostels",id:"create_three_records" %>
+<br>    
+
+   <div id= "ajax_result">
+   </div>
 
 <%= link_to 'New Hostel', new_hostel_path %>
+
+<script>
+$("#create_three_records").click(function(){
+    $.ajax({
+            type: "GET",
+            url: "hostels/ajax_demo",
+            data: "",
+            success: function(data) {
+             $("#ajax_result").text("created 3 records in hostels table");
+            },
+            error: function(data) {
+             alert("error")
+            }
+          });
+});
+</script>
+

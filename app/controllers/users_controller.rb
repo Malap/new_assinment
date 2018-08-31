@@ -36,7 +36,10 @@ class UsersController < ActionController::Base
   	@user = User.find(params[:id])
   	@user.destroy
   	redirect_to users_path
-
+  end
+  def ajax_demo
+    (102..104).each do |i|
+      User.create(name:"venkat#{i}",city:"hyderabad#{i}",country:"india#{i}",email:"venkat@gmail.com#{i}")
   end
    private
 

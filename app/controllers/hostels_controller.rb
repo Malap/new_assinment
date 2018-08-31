@@ -60,7 +60,11 @@ class HostelsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+ def ajax_demo
+    (11..14).each do |i|
+    Hostel.create(name:"venkat#{i}",room:"hyderabad#{i}",address:"india#{i}")
+  end
+end
   def update_first_record
     @hostel = Hostel.find(params[:id])
       @hostel.update(hostel_params)

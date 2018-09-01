@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @laptop.model %>
+</p>
+
+<p>
+  <strong>Ram:</strong>
+  <%= @laptop.ram %>
+</p>
+
+<p>
+  <strong>Processor:</strong>
+  <%= @laptop.processor %>
+</p>
+
+<%= link_to 'Edit', edit_laptop_path(@laptop) %> |
+<%= link_to 'Back', laptops_path %>

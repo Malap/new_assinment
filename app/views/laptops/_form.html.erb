@@ -1,0 +1,32 @@
+<%= form_for(laptop) do |f| %>
+  <% if laptop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(laptop.errors.count, "error") %> prohibited this laptop from being saved:</h2>
+
+      <ul>
+      <% laptop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :model %>
+    <%= f.text_field :model %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ram %>
+    <%= f.text_field :ram %>
+  </div>
+
+  <div class="field">
+    <%= f.label :processor %>
+    <%= f.text_field :processor %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

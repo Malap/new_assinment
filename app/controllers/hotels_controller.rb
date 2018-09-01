@@ -72,3 +72,4 @@ class HotelsController < ApplicationController
       params.require(:hotel).permit(:city, :name, :address)
     end
 end
+

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :hotels 
 resources :users
 resources :books
+resources :keywords
 resources :products
 resources :laptops do
     member do
@@ -21,8 +22,6 @@ resources :laptops do
             get 'ajax_demo'
           end
       end
-
-
 end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

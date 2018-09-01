@@ -1,0 +1,22 @@
+<%= simple_form_for(@keyword, remote: true, html: {id: 'form_keywords'}) do | f | %>
+      <div id = "keywords_list" >
+        <%= render 'keywords/keywords_list' %>
+      </div>
+
+      <div id='keyword_flash_notice' class="collapse"></div>
+
+      <div>
+        <%= f.input :keyword, placeholder: 'Enter keyword' %>
+      </div>
+
+      <div>
+        <%= f.submit 'RESET',id:"reset_keyword" %>
+        <%= f.submit 'SAVE'  %>
+      </div>
+
+<% end %>
+<script>
+  $('#reset_keyword').click(function () {
+      $('#form_keywords')[0].reset();
+  });
+</script>

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180826110745) do
+ActiveRecord::Schema.define(version: 20180903050554) do
+
+  create_table "animals", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "species"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "books", force: :cascade do |t|
     t.string  "name"
@@ -18,10 +26,30 @@ ActiveRecord::Schema.define(version: 20180826110745) do
     t.integer "user_id"
   end
 
+  create_table "hostels", force: :cascade do |t|
+    t.string   "name"
+    t.string   "room"
+    t.string   "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "hotels", force: :cascade do |t|
     t.string   "city"
     t.string   "name"
     t.string   "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "keywords", force: :cascade do |t|
+    t.string "keyword"
+  end
+
+  create_table "laptops", force: :cascade do |t|
+    t.string   "model"
+    t.string   "ram"
+    t.string   "processor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,6 +62,14 @@ ActiveRecord::Schema.define(version: 20180826110745) do
     t.integer  "user_id"
   end
 
+  create_table "sites", force: :cascade do |t|
+    t.string  "name"
+    t.integer "party_id"
+    t.string  "party"
+    t.string  "coutry"
+    t.string  "city"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "city"
@@ -41,6 +77,7 @@ ActiveRecord::Schema.define(version: 20180826110745) do
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "active"
   end
 
 end

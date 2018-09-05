@@ -10,6 +10,7 @@ namespace :seed_data do
     desc "create seed data books table"
   task books: :environment do
     Book.destroy_all
+    byebug
      (102..150).each do|i|
        Book.create(name:"hari#{i}",user_id:i,description:"this is book table#{i}")
       end
